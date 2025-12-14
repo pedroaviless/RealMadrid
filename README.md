@@ -50,11 +50,7 @@ El código fuente principal se encuentra en el paquete `com.example.realmadrid`.
 
 ## 📸 Capturas de Pantalla
 
-
-
-| ![](C:\Users\pedro\Pictures\Saved Pictures\Screenshot_1portad.png) | ![rmScreenshot_2](C:\Users\pedro\Pictures\Saved Pictures\rmScreenshot_2.png) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-
+![Captura](https://raw.githubusercontent.com/pedroaviless/images/refs/heads/main/Screenshot_1portad.png)
 
 
 ---
