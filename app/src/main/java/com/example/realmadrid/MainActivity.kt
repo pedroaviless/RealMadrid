@@ -11,18 +11,19 @@ import com.example.realmadrid.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var adapter: RealMadridAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initRecyclerView()
+        binding.btnAddJugador.setOnClickListener { createJugador() }
     }
 
     private fun initRecyclerView() {
         val manager = LinearLayoutManager(this)
-        val adapter =
-            RealMadridAdapter(JugadoresProvider.jugadoresList.toMutableList()) { jugador ->
+        adapter = RealMadridAdapter(JugadoresProvider.jugadoresList.toMutableList()) { jugador ->
                 onItemSelected(jugador)
             }
 
@@ -66,5 +67,14 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 
-
+    private fun createJugador() {
+        val jugador = Jugadores(
+            "Pedro",
+            6,
+            "Medio",
+            "https://raw.githubusercontent.com/pedroaviless/images/refs/heads/main/frankpedro.png",
+            "El mejor jugador de trompo del mundo"
+        )
+        adapter.addJugador(jugador)
+    }
 }

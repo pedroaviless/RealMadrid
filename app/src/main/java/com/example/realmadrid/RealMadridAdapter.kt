@@ -26,4 +26,9 @@ class RealMadridAdapter(
         realMadridList.removeAt(position)
         notifyItemRemoved(position)
     }
+
+    fun addJugador(jugador: Jugadores) {
+        realMadridList.add(jugador)
+        notifyItemInserted(realMadridList.size - 1)
+    }
 }
